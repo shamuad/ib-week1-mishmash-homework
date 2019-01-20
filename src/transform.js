@@ -29,6 +29,7 @@ const people = [
 function groupAdultsByAgeRange(people) {
     const result = {}
     people.filter(person => person.age < 18)
+
     // result[1] = people.filter(person => person.age >= 21 && person.age <= 30)
     // result[2] = people.filter(person => person.age >= 31 && person.age <= 40)
     // result[3] = people.filter(person => person.age >= 41 && person.age <= 50)
