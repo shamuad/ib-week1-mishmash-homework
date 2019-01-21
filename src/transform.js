@@ -27,17 +27,44 @@ const people = [
     { name: "oldd", age: 120 }]
 
 function groupAdultsByAgeRange(people) {
-    const result = {}
-    people.filter(person => person.age < 18)
 
-    // result[1] = people.filter(person => person.age >= 21 && person.age <= 30)
+    return people.reduce((collection_of_groups, person) => {
+        // item is a person object
+
+        // collection_of_groups["20 and older"].push
+        
+        // if statement
+        if (person.age < 20) {
+            
+            collection_of_groups["20 and younger"].push(person)
+
+        } else if (person.age > 20 && person.age <30 ) {
+            ##group##.push(person);
+            
+            //return { "20-30" : [ person] }
+        }
+
+        // push to some group
+        console.log(acc)
+        return collection_of_groups;
+    }, {
+        "20 and ying": [],
+    });
+
+//    const result = {}
+//    people.filter(person => person.age < 18)
+
+//    arr[4] = "hi"
+
+//    kelley["20 and older"] = []
+    // result["20 and older"] = people.filter(person => person.age >= 21 && person.age <= 30)
     // result[2] = people.filter(person => person.age >= 31 && person.age <= 40)
     // result[3] = people.filter(person => person.age >= 41 && person.age <= 50)
     // result[4] = people.filter(person => person.age >= 51 )
     return result
 }
 
-// console.log(groupAdultsByAgeRange(people))
+groupAdultsByAgeRange(people)
 
 module.exports.groupAdultsByAgeRange = groupAdultsByAgeRange
 
