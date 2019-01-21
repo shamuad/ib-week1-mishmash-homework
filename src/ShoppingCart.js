@@ -17,7 +17,7 @@ class ShoppingCart {
 
     total() {
         return this.items.reduce((acc, item) => {
-            acc + item.quantity * item.pricePerUnit
+            return acc + (item.quantity * item.pricePerUnit)
         }, 0)
     }
 }
